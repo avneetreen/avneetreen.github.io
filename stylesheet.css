@@ -1,8 +1,8 @@
 @font-face {
-    font-family: "roboto-mono";
-    src: url(https://fonts.googleapis.com/css?family=Roboto:100&subset=latin-ext);
+    font-family: "Roboto";
+    src: url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap);
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
 }
