@@ -40,12 +40,46 @@
           </tbody></table>
     
     
-    <section class="papertile" title = "Research Projects"> 
-    <p  class="sectiontitle"> Research Projects</p>
+    <section class="papertile" title = "Selected Research &amp; Projects"> 
+    <p  class="sectiontitle"> Selected Research &amp; Projects</p>
 
     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-<tr>
+      <tr>
+        <td style="padding:0px;width:25%;vertical-align:middle">
+          <div class="papertile">
+
+            <img src='images/predictions.jpg' width="200">
+          </div>
+        </td>
+      <td style="padding:10px;width:75%;vertical-align:middle">
+        <a href="https://www.researchgate.net/publication/373680658_Field_Boundary_Delineation">
+          <span>AI-Based Field Boundary Delineation from Satellite Imagery</span>
+        </a>
+        <br>
+        <em> University of Copenhagen, Department of Computer Science, DHI</em> <br> <br> 
+        Avneet Kaur, <em>in collaboration with, </em> 
+        <a target="_blank" href="https://research.ku.dk/search/result/?pure=en%2Fpersons%2Fstefan-oehmcke(5251ee43-5d02-4c29-910f-134b39d3b98e)%2Fpublications.html&publicationYearsFrom=2023&publicationYearsTo=2023"> Stefan Oehmcke, </a> 
+        <a target="_blank" href="https://www.linkedin.com/in/kenneth-grogan-5408244a/?originalSubdomain=dk">Kenneth Grogan</a>
+        <br>
+        <p>
+        Farmers and agricultural service providers need digital records of field boundaries, but delineating them is still largely manual, slow and hard to keep up to date over large areas. In collaboration with DHI, we automated this with deep learning on freely available Sentinel-2 satellite imagery of Danish farmland.
+        I built the full pipeline end to end: extracting multi-spectral Sentinel-2 tiles across Denmark, generating monthly median composites, deriving field extents, boundaries and distance transforms as labels, and producing a training set of about 48,000 image crops. I trained a ResUNet to jointly predict, for every pixel, the probability of belonging to a field, the probability of lying on a boundary, and the distance to the nearest boundary, and then used threshold-based post-processing to turn these outputs into closed, individual field parcels. Preliminary results reached about 80% accuracy on held-out test regions.
+
+<br>
+      <a href="https://github.com/avneetreen/Delineating-Field-Boundaries">Code</a>
+      /
+      <a href="https://www.researchgate.net/publication/373680658_Field_Boundary_Delineation">PDF</a> 
+      /
+      <a href="data/field_boundary_delineation.pdf">Slides</a> <br> 
+        </p>
+
+    </td>
+    </tr>
+
+      <tr><td><p></p></td><td><p></p></td></tr>
+
+      <tr>
         <td style="padding:0px;width:25%;vertical-align:middle">
           <div class="papertile">
 
@@ -75,16 +109,81 @@
         <td style="padding:0px;width:25%;vertical-align:middle">
           <div class="papertile">
 
+            <img src='images/brain.png' width="180">
+          </div>
+        </td>
+        
+        <td style="padding:0px;width:75%;vertical-align:middle">
+          <a href="https://www.researchgate.net/publication/373680192_Development_of_a_robust_and_reproducible_preprocessing_pipeline_for_Positron_Emission_Tomography_PET_data">
+            <span>An Automated, Reproducible Preprocessing Pipeline for PET Brain Imaging</span>
+          </a><br>
+          <em>M.Sc. Thesis, University of Copenhagen, Department of Computer Science</em> <br> <br> 
+          Avneet Kaur, <em>under the supervision of, </em> 
+          <a target="_blank" href="https://sites.google.com/view/melanieganz/home"> Melanie Ganz-Benjaminsen, </a> 
+          <a target="_blank" href="https://mnoergaard.github.io/">Martin Nørgaard</a>, Vincent Beliveau 
+          <br>
+          <p>
+          Differences in how Positron Emission Tomography (PET) brain scans are preprocessed can lead studies to different conclusions, which hurts the reproducibility of neuroimaging research. For my thesis, I developed an open, automated and configurable preprocessing pipeline for PET data, built with Nipype on top of established neuroimaging tools (FreeSurfer, PETSurfer, FSL) and BIDS-formatted data.
+          The pipeline covers the standard preprocessing steps of motion correction, co-registration to anatomical MRI, delineation of volumes of interest, partial volume correction and pharmacokinetic modelling. To evaluate robustness and computational reproducibility, I tested it on three datasets from different scanners and radiotracers, across different computational environments. The code is part of the open-source OpenNeuroPET project.
+          <br>
+          <a href="https://github.com/openneuropet/PET_pipelines/tree/main/pet_nipype">Code</a>
+          /
+          <a href="https://www.researchgate.net/publication/373680192_Development_of_a_robust_and_reproducible_preprocessing_pipeline_for_Positron_Emission_Tomography_PET_data">PDF</a> 
+          / 
+          <a href="data/msc_defence.pdf">Slides</a> 
+        </p>
+
+          <br> 
+        </td>
+      </tr>
+
+      <tr><td><p></p></td><td><p></p></td></tr>
+
+      <tr>
+        <td style="padding:0px;width:25%;vertical-align:middle">
+          <div class="papertile">
+
+            <img src='images/echoes_of_agreement.png' width="200">
+          </div>
+        </td>
+        <td style="padding:10px;width:75%;vertical-align:middle">
+          <a href="https://aclanthology.org/2025.findings-emnlp.1241/">
+            <span>Echoes of Agreement: Argument Driven Sycophancy in Large Language Models</span>
+          </a><br>
+          <em>Findings of the Association for Computational Linguistics: EMNLP 2025</em> <br> <br>
+          <strong style="font-weight:700">Avneet Kaur</strong>
+          <br>
+          <p>
+            LLMs are known to be sycophantic, tending to align their outputs with a user's stated beliefs, but how explicit arguments in a prompt drive this behaviour was underexplored. This paper investigates how argumentative prompts induce sycophancy in LLMs on political topics. Through a series of experiments, I show that models consistently change their responses to mirror the stance expressed by the user, in both single-turn and multi-turn conversations, and that the strength of this effect grows with the strength of the argument. These findings reveal a critical vulnerability for model reliability in real-world deployments and call for robust evaluations and mitigations against manipulative or biased interactions.
+            <br>
+            <a href="https://github.com/avneetreen/argument-driven-sycophancy">Code</a>
+            /
+            <a href="https://aclanthology.org/2025.findings-emnlp.1241/">ACL Anthology</a>
+            /
+            <a href="data/echoes_of_agreement.pdf">PDF</a> <br>
+          </p>
+        </td>
+      </tr>
+
+      <tr><td><p></p></td><td><p></p></td></tr>
+
+      <tr>
+        <td style="padding:0px;width:25%;vertical-align:middle">
+          <div class="papertile">
+
             <img src='images/code_based.png' width="180">
           </div>
         </td>
         <td style="padding:10px;width:75%;vertical-align:middle">
           <a href="">
-            <span>Code Based Synthetic Data Pipeline for Multimodal data</span>
+            <span>AI-Driven Synthetic Chart Data Generation for Vision Language Models</span>
           </a><br>
-          <em><a href="https://sites.google.com/cohere.com/expedition-aya-2025/2025-expedition-projects?authuser=0"> Expedition AYA, Cohere Labs</a></em> <br> <br> 
+          <em><a href="https://sites.google.com/cohere.com/expedition-aya-2025/2025-expedition-projects?authuser=0"> Expedition AYA 2025, Cohere Labs</a></em> <br> <br> 
+          Avneet Kaur, Dante Lok, Reuben Chagas Fernandes
+          <br>
           <p>
-            In this project, we developed a Code Based Synthetic Data Pipeline for Multimodal data to train, enhance, and evaluate multimodal models such as Vision Language Models (VLMs).
+            Vision Language Models (VLMs) struggle with charts and plots, partly because existing multimodal datasets contain little structured chart data. We built a pipeline that generates such data synthetically, at scale and low cost, to train, enhance and evaluate VLMs.
+            Starting from tabular (CSV) data, an LLM writes plotting code that is executed to render diverse charts (bar, line, scatter, pie, area and histogram). A second LLM stage generates question-answer pairs and chart tasks covering numerical understanding, chart summarization, anomaly detection, data correlation, forecasting and chain-of-thought reasoning. We then evaluate VLMs on these tasks using ground-truth checks for numerical answers, VLM-as-a-judge for descriptions, and human evaluation for factuality, coverage and diversity. We also built an interactive Next.js web app on the Cohere API for generating charts and Q&amp;A pairs.
             <br>
             <a href="https://github.com/avneetreen/Code-based-Synthetic-Multimodal-Data-Generation">Code</a>
             /
@@ -99,14 +198,14 @@
         <td style="padding:0px;width:25%;vertical-align:middle">
           <div class="papertile">
 
-            <img src='images/expedition_aya.png' width="180">
+            <img src='images/opinion_shifts.png' width="200">
           </div>
         </td>
         <td style="padding:10px;width:75%;vertical-align:middle">
           <a href="data/language_based_opinion_shifts.pdf">
             <span>Language-Based Opinion Shifts: Exploring the Language Effect in Multilingual Language Models Regarding Political Opinions</span>
           </a><br>
-          <em><a href="https://sites.google.com/cohere.com/expedition-aya/project-showcase?authuser=0"> Expedition AYA, Cohere Labs</a></em> <br> <br> 
+          <em><a href="https://sites.google.com/cohere.com/expedition-aya/project-showcase?authuser=0"> Expedition AYA 2024, Cohere Labs</a></em> <br> <br> 
           <p>
             We developed a multilingual framework to measure political bias in large language models (LLMs) and to uncover how the language of a prompt changes the political opinions a model expresses. We benchmarked six multilingual LLMs across 23 languages (covering roughly half of the world's population), introduced a metric that quantifies language-specific sensitivity to political bias, and investigated the effect of language-sensitive models on downstream tasks such as harmful text generation.
             <br><a href="https://cohere.com/blog/empowering-others-to-explore-the-next-frontier-expedition-aya">Featured as the most innovative project in Cohere for AI Blog post</a> 
@@ -130,11 +229,12 @@
         </td>
         <td style="padding:10px;width:75%;vertical-align:middle">
           <a href="">
-            <span>Multilingual Climate Change chatbot </span>
+            <span>Safe and Multilingual RAG Chatbot for Climate Education</span>
           </a><br>
           <em><a href="https://sites.google.com/cohere.com/expedition-aya/project-showcase?authuser=0">Expedition AYA, Cohere Labs</a></em> <br> <br> 
           <p>
-            In this project, I contributed to the development of Our Multilingual Climate Chatbot project that aims to make climate research and education accessible to all.
+            Built with Climate Resilient Communities, this chatbot aims to make climate research and education accessible to all Torontonians, regardless of their cultural or linguistic background. Existing climate information is often fragmented, full of jargon, and excludes non-English speakers and marginalized communities.
+            I contributed to the development of the system, a multilingual retrieval-augmented generation (RAG) application. It answers questions about local climate risks, adaptation strategies and best practices by grounding responses in curated climate documents, uses Cohere's Aya models for translation across languages, and wraps generation in safety layers: input guardrails against harmful or off-topic queries, PII redaction, relevance checks on retrieved context, and output checks for factual accuracy.
             <br>
             <a href="https://github.com/Climate-Resilient-Communities/Climate-LLM-App">Code</a>
             / 
@@ -148,78 +248,28 @@
 
       <tr><td><p></p></td><td><p></p></td></tr>
 
-      <tr>
-        <td style="padding:0px;width:25%;vertical-align:middle">
-          <div class="papertile">
-
-            <img src='images/predictions.jpg' width="200">
-          </div>
-        </td>
-      <td style="padding:10px;width:75%;vertical-align:middle">
-        <a href="https://www.researchgate.net/publication/373680658_Field_Boundary_Delineation">
-          <span>Field Boundary Delineation applied to Danish agriculture</span>
-        </a>
-        <br>
-        <em> University of Copenhagen, Department of Computer Science, DHI</em> <br> <br> 
-        Avneet Kaur, <em>in collaboration with, </em> 
-        <a target="_blank" href="https://research.ku.dk/search/result/?pure=en%2Fpersons%2Fstefan-oehmcke(5251ee43-5d02-4c29-910f-134b39d3b98e)%2Fpublications.html&publicationYearsFrom=2023&publicationYearsTo=2023"> Stefan Oehmcke, </a> 
-        <a target="_blank" href="https://www.linkedin.com/in/kenneth-grogan-5408244a/?originalSubdomain=dk">Kenneth Grogan</a>
-        <br>
-        <p>
-        Danish parcel delineation is an important task that currently has to
-be done manually. In this work, we automate this laborious and error-prone process. Based on real data from Danish agriculture, we applied deep learning methods to efficiently detect parcels from freely available satellite images. To that end, we created a complete
-data pipeline, from data collection over to processing, then building and evaluating the model. 
-<br>
-      <a href="https://github.com/avneetreen/Delineating-Field-Boundaries">Code</a>
-      /
-      <a href="https://www.researchgate.net/publication/373680658_Field_Boundary_Delineation">PDF</a> 
-      /
-      <a href="data/field_boundary_delineation.pdf">Slides</a> <br> 
-        </p>
-
-    </td>
-    </tr>
-
-      <tr><td><p></p></td><td><p></p></td></tr>
-
-      <tr>
-        <td style="padding:0px;width:25%;vertical-align:middle">
-          <div class="papertile">
-
-            <img src='images/brain.png' width="180">
-          </div>
-        </td>
-        
-        <td style="padding:0px;width:75%;vertical-align:middle">
-          <a href="https://www.researchgate.net/publication/373680192_Development_of_a_robust_and_reproducible_preprocessing_pipeline_for_Positron_Emission_Tomography_PET_data">
-            <span>Development of a robust and reproducible preprocessing pipeline for Positron Emission Tomography (PET) data</span>
-          </a><br>
-          <em>M.Sc. Thesis, University of Copenhagen, Department of Computer Science</em> <br> <br> 
-          Avneet Kaur, <em>under the supervision of, </em> 
-          <a target="_blank" href="https://sites.google.com/view/melanieganz/home"> Melanie Ganz-Benjaminsen, </a> 
-          <a target="_blank" href="https://mnoergaard.github.io/">Martin Nørgaard</a>, Vincent Beliveau 
-          <br>
-          <p>
-          We developed an open, robust and automated preprocessing pipeline for PET data using existing state-of-the-art neuroimaging software and implemented using Nipype. 
-          To test the pipeline for robustness and computational reproducibility, the pipeline was tested on three datasets from different scanners and tracers across different computational environments.
-          <br>
-          <a href="https://github.com/openneuropet/PET_pipelines/tree/main/pet_nipype">Code</a>
-          /
-          <a href="https://www.researchgate.net/publication/373680192_Development_of_a_robust_and_reproducible_preprocessing_pipeline_for_Positron_Emission_Tomography_PET_data">PDF</a> 
-          / 
-          <a href="data/msc_defence.pdf">Slides</a> 
-        </p>
-
-          <br> 
-        </td>
-      </tr>
-
-      <tr><td><p></p></td><td><p></p></td></tr>
-
       </tbody>
       </table>
 
 
+    </section>
+    <section class="papertile" title = "Earlier Publications">
+    <p  class="sectiontitle"> Earlier Publications</p>
+    <p>
+      <a target="_blank" rel="noopener noreferrer" href="https://ojs.aaai.org/index.php/AAAI/article/view/7191">Multidimensional Analysis of Trust in News Articles</a><br>
+      <strong style="font-weight:700">Avneet Kaur</strong>, Maitree Leekha, Utkarsh Chawla, Ayush Agarwal, Mudit Saxena, Nishtha Madaan, Kalapriya Kannan, Sameep Mehta<br>
+      <em>AAAI Conference on Artificial Intelligence (Student Abstract), 2020</em>
+    </p>
+    <p>
+      <a target="_blank" rel="noopener noreferrer" href="https://link.springer.com/chapter/10.1007/978-3-030-00671-6_15">That's Interesting, Tell Me More! Finding Descriptive Support Passages for Knowledge Graph Relationships</a><br>
+      Sumit Bhatia, Purusharth Dwivedi, <strong style="font-weight:700">Avneet Kaur</strong><br>
+      <em>International Semantic Web Conference (ISWC), 2018</em> &nbsp;/&nbsp; <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/1803.06555">arXiv</a>
+    </p>
+    <p>
+      <a target="_blank" rel="noopener noreferrer" href="https://academic.oup.com/nar/article/46/D1/D1210/4559748">FlavorDB: A Database of Flavor Molecules</a><br>
+      Neelansh Garg, Apuroop Sethupathy, Rudraksh Tuwani, Rakhi NK, Shubham Dokania, Arvind Iyer, Ayushi Gupta, Shubhra Agrawal, Navjot Singh, Shubham Shukla, Kriti Kathuria, Rahul Badhwar, Rakesh Kanji, Anupam Jain, <strong style="font-weight:700">Avneet Kaur</strong>, Rashmi Nagpal, Ganesh Bagler<br>
+      <em>Nucleic Acids Research, 2018</em>
+    </p>
     </section>
     <section title = "Education"> 
     
